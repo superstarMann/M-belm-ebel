@@ -1,0 +1,11 @@
+{
+  "name": "moebelplan-web-mvp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Lokaler, dependency-freier MöbelPlan Web/PWA Prototyp",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check app.js && node --check server.js"
+  }
+}

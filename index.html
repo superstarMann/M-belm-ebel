@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0e6f67" />
+    <meta
+      name="description"
+      content="Möbel aus mehreren Shops transparent vergleichen und als Sammellieferung planen."
+    />
+    <title>MöbelPlan – mehrere Shops, eine Lieferung</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%230e6f67'/%3E%3Cpath d='M17 45V19h8l7 12 7-12h8v26h-8V31l-7 11-7-11v14z' fill='white'/%3E%3C/svg%3E" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <button class="brand" type="button" data-nav="home" aria-label="Zur Startseite">
+        <span class="brand-mark" aria-hidden="true">M</span>
+        <span>MöbelPlan</span>
+      </button>
+
+      <nav class="desktop-nav" aria-label="Hauptnavigation">
+        <button type="button" data-nav="home">Entdecken</button>
+        <button type="button" data-nav="compare">
+          Vergleich <span class="nav-count" data-count="compare">0</span>
+        </button>
+        <button type="button" data-nav="cart">
+          Warenkorb <span class="nav-count" data-count="cart">0</span>
+        </button>
+        <button type="button" data-nav="tracking">Lieferung</button>
+      </nav>
+    </header>
+
+    <main id="app" tabindex="-1"></main>
+
+    <nav class="mobile-nav" aria-label="Mobile Hauptnavigation">
+      <button type="button" data-nav="home"><span aria-hidden="true">⌕</span>Entdecken</button>
+      <button type="button" data-nav="compare">
+        <span aria-hidden="true">▣</span>Vergleich
+        <strong class="mobile-count" data-count="compare">0</strong>
+      </button>
+      <button type="button" data-nav="cart">
+        <span aria-hidden="true">□</span>Warenkorb
+        <strong class="mobile-count" data-count="cart">0</strong>
+      </button>
+      <button type="button" data-nav="tracking"><span aria-hidden="true">→</span>Lieferung</button>
+    </nav>
+
+    <dialog id="filter-dialog" class="sheet-dialog" aria-labelledby="filter-title"></dialog>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

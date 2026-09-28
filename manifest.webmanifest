@@ -1,0 +1,10 @@
+{
+  "name": "MöbelPlan MVP",
+  "short_name": "MöbelPlan",
+  "description": "Möbel aus mehreren Shops transparent vergleichen und gemeinsam liefern lassen.",
+  "start_url": "/#home",
+  "display": "standalone",
+  "background_color": "#f5f6f6",
+  "theme_color": "#0e6f67",
+  "lang": "de"
+}
