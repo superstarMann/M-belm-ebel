@@ -11,6 +11,7 @@ const mimeTypes = {
   ".css": "text/css; charset=utf-8",
   ".js": "text/javascript; charset=utf-8",
   ".json": "application/json; charset=utf-8",
+  ".md": "text/plain; charset=utf-8",
   ".webmanifest": "application/manifest+json; charset=utf-8",
   ".svg": "image/svg+xml"
 };
@@ -37,7 +38,7 @@ const server = createServer(async (request, response) => {
 
     const content = await readFile(filePath);
     response.writeHead(200, {
-      "Content-Type": mimeTypes[extname(filePath)] || "application/octet-stream",
+      "Content-Type": mimeTypes[extname(filePath)] || "text/plain; charset=utf-8",
       "Cache-Control": "no-cache"
     });
     response.end(content);
